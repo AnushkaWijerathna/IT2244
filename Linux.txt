@@ -1,0 +1,144 @@
+{ ~ }  » touch xyz.tsv
+{ ~ }  » vi xyz.tsv
+{ ~ }  » ls -a
+.              .minttyrc         .zcompdump-DESKTOP-NGG22K2-5.0.6  program1.sh~
+..             .new.txt.un~      .zshrc                            rows_test1.csv
+.abc.tsv.un~   .oh-my-zsh        .zsh-update                       temp1_file.csv
+.babunrc       .pact             abc,tsv                           test.csv
+.bash_history  .profile          abc.tsv                           test.csv~
+.bash_profile  .program1.sh.un~  abc.tsv~                          test3.csv
+.bashrc        .test.csv.un~     bin                               test3.csv~
+.gitconfig     .vim              list.csv                          xyz.tsv
+.inputrc       .viminfo          new.txt                           xyz.tsv~
+.list.csv.un~  .xyz.tsv.un~      new.txt~
+.local         .zcompdump        program1.sh
+{ ~ }  » cut -d$'\t' -f1 xyz.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+ll
+{ ~ }  » cut -d " " -f3 xyz.tsv
+aa      12      33      44
+bb      22      34      56
+cc      12      10      78
+dd      56      89      70
+ee      45      56      57
+ff      12      20      30
+gg      45      56      78
+hh      10      13      15
+ii      20      75      96
+jj      45      56      52
+kk      13      85      95
+ll      74      85      96
+{ ~ }  » head -n2 xyz.tsv
+aa      12      33      44
+bb      22      34      56
+{ ~ }  » tail -n2 xyz.tsv
+kk      13      85      95
+ll      74      85      96
+{ ~ }  » vi xyz.tsv
+{ ~ }  » cut -d\t -f1 xyz.tsv
+aa 12 33 44
+bb 22 34 56
+cc 12 10 78
+dd 56 89 70
+ee 45 56 57
+ff 12 20 30
+gg 45 56 78
+hh 10 13 15
+ii 20 75 96
+jj 45 56 52
+kk 13 85 95
+ll 74 85 96
+{ ~ }  » cut -d ' ' -f1 xyz.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+ii
+jj
+kk
+ll
+{ ~ }  » cut -d ' ' -f2 xyz.tsv
+12
+22
+12
+56
+45
+12
+45
+10
+20
+45
+13
+74
+{ ~ }  » head xyz.tsv
+aa 12 33 44
+bb 22 34 56
+cc 12 10 78
+dd 56 89 70
+ee 45 56 57
+ff 12 20 30
+gg 45 56 78
+hh 10 13 15
+ii 20 75 96
+jj 45 56 52
+{ ~ }  » head -8 xyz.tsv
+aa 12 33 44
+bb 22 34 56
+cc 12 10 78
+dd 56 89 70
+ee 45 56 57
+ff 12 20 30
+gg 45 56 78
+hh 10 13 15
+{ ~ }  » tail -8 xyz.tsv
+ee 45 56 57
+ff 12 20 30
+gg 45 56 78
+hh 10 13 15
+ii 20 75 96
+jj 45 56 52
+kk 13 85 95
+ll 74 85 96
+{ ~ }  » head -1 xyz.tsv
+aa 12 33 44
+{ ~ }  » tail -1 xyz.tsv
+ll 74 85 96
+{ ~ }  » head -100 xyz.tsv
+aa 12 33 44
+bb 22 34 56
+cc 12 10 78
+dd 56 89 70
+ee 45 56 57
+ff 12 20 30
+gg 45 56 78
+hh 10 13 15
+ii 20 75 96
+jj 45 56 52
+kk 13 85 95
+ll 74 85 96
+{ ~ }  » head -n8 xyz.tsv | tail -n1
+hh 10 13 15
+{ ~ }  » wc -l xyz.tsv
+12 xyz.tsv
+{ ~ }  » head -n10 xyz.tsv | grep 'dd'
+dd 56 89 70
+{ ~ }  » head -n7 xyz.tsv | grep '56'
+bb 22 34 56
+dd 56 89 70
+ee 45 56 57
+gg 45 56 78
+{ ~ }  »
